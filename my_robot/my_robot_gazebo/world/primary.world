@@ -6,10 +6,19 @@
     		<uri>model://ambulance</uri>
 		<pose>10.0 5.0 0.0  0 0 0</pose>
 	</include> -->
+<!-- Ciel *************************************************************************************** Ciel -->
+	<scene>
+		<sky>
+			<sunrise>12</sunrise>
+			<clouds>4</clouds>
+		</sky>
+	</scene>
+<!-- Soleil *********************************************************************************** Soleil -->
 	<include> 
     		<uri>model://sun</uri>
 		<pose>0.0 0.0 10.0  0 0 0</pose>
 	</include>
+<!-- Sol *************************************************************************************** Sol -->
         <model name='ground_plane'>
             <static>1</static>
             <link name='link'>
@@ -58,7 +67,10 @@
                 <gravity>1</gravity>
             </link>
         </model>
+          
+<!-- Obstacles ************************************************************************************************** Obstacles -->
 
+	<!-- Arbres ********************************************************************* Arbres -->
 	<model name='obstacles'>
 		<static>1</static>
 		<link name="tronc_0">
@@ -534,6 +546,7 @@
 				</material>
 			</visual>
 		</link>
+		
 		<link name="tronc_11">
 			<pose> 12 -37 1.0  0 0 0</pose>
 			<visual name="visual">
@@ -1351,12 +1364,208 @@
 				</material>
 			</visual>
 		</link>
+	<!-- Citrouilles ********************************************************************* Citrouilles -->
+		<link name="citrouille">
+			<pose> 15 0.2 0 0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_0">
+			<pose> 5.613 -0.013 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_1">
+			<pose> 7.562 -0.064 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_2">
+			<pose> 13.404 0.034 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_3">
+			<pose> 11.34 -0.093 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_4">
+			<pose> 10.862 -0.18 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_5">
+			<pose> 1.777 -0.187 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_6">
+			<pose> 9.663 -0.025 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_7">
+			<pose> 10.898 0.187 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_8">
+			<pose> 14.466 0.102 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="citrouille_9">
+			<pose> 14.356 -0.052 0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<mesh>
+						<uri>
+							file:///home/dorian/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/meshes/pumpkin.STL
+						</uri>
+					</mesh>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Orange</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+
 
 	</model>
-
-
     </world>
 <plugin name="plugins" filename="libplugins.so"/>
 </sdf>
-
-
