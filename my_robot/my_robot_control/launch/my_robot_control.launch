@@ -7,4 +7,7 @@
 	<param name="use_gui" value="$(arg gui)"/>
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+	<rosparam command="load" file="$(find my_robot_control)/config/joints.yaml" ns="my_robot_joint_state_controller"/> 
+	<rosparam command="load" file="$(find my_robot_control)/config/diff_drive.yaml" ns="my_robot_velocity_controller"/>
+	<node name="my_robot_controller_spawner" pkg="controller_manager" type="spawner" args="my_robot_joint_state_controller my_robot_velocity_controller"/>
 </launch>

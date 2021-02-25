@@ -45,7 +45,7 @@
                     <material>
                         <script>
                             <uri>file://media/materials/scripts/gazebo.material</uri>
-                            <name>Gazebo/While</name>
+                            <name>Gazebo/Grass</name>
                         </script>
                     </material>
                 </visual>
@@ -61,8 +61,8 @@
 
 	<model name='obstacles'>
 		<static>1</static>
-		<link name="box_00">
-			<pose>5.0 2.0 1.0  0 0 0</pose>
+		<link name="tronc_0">
+			<pose> 18 -26 1.0  0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
@@ -88,15 +88,35 @@
 				</geometry>
 			</collision>
 		</link>
-		<link name="box_01">
-			<pose>1.0 -4.0 0.750  0 0 0</pose>
+		<link name="feuillage_0">
+			<pose> 18 -26 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_1">
+			<pose> -3 2 1.0  0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
-						<size>0.75 1.0 1.5</size>
+						<size>0.5 0.5 2.0</size>
 					</box>
 				</geometry>
 				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
                             			<name>Gazebo/Red</name>
@@ -106,20 +126,40 @@
 			<collision name="collision">
 				<geometry>
 					<box>
-					<size>0.75 1.0 1.5</size>
+						<size>0.5 0.5 2.0</size>
 					</box>
 				</geometry>
 			</collision>
 		</link>
-		<link name="box_02">
-			<pose>10.0 0.0 0.50  0 0 0</pose>
+		<link name="feuillage_1">
+			<pose> -3 2 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_2">
+			<pose> 15 -30 1.0  0 0 0</pose>
 			<visual name="visual">
 				<geometry>
 					<box>
-						<size>1.5 1.0 1.0</size>
+						<size>0.5 0.5 2.0</size>
 					</box>
 				</geometry>
 				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
 					<script>
                             			<uri>file://media/materials/scripts/gazebo.material</uri>
                             			<name>Gazebo/Red</name>
@@ -129,11 +169,1189 @@
 			<collision name="collision">
 				<geometry>
 					<box>
-					<size>1.5 1.0 1.0</size>
+						<size>0.5 0.5 2.0</size>
 					</box>
 				</geometry>
 			</collision>
 		</link>
+		<link name="feuillage_2">
+			<pose> 15 -30 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_3">
+			<pose> 3 -27 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_3">
+			<pose> 3 -27 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_4">
+			<pose> -14 24 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_4">
+			<pose> -14 24 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_5">
+			<pose> -19 -15 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_5">
+			<pose> -19 -15 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_6">
+			<pose> -15 -31 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_6">
+			<pose> -15 -31 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_7">
+			<pose> -31 2 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_7">
+			<pose> -31 2 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_8">
+			<pose> -10 -15 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_8">
+			<pose> -10 -15 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_9">
+			<pose> -40 18 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_9">
+			<pose> -40 18 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_10">
+			<pose> -10 0 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_10">
+			<pose> -10 0 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_11">
+			<pose> 12 -37 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_11">
+			<pose> 12 -37 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_12">
+			<pose> 16 -39 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_12">
+			<pose> 16 -39 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_13">
+			<pose> 18 15 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_13">
+			<pose> 18 15 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_14">
+			<pose> 29 -12 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_14">
+			<pose> 29 -12 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_15">
+			<pose> -14 36 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_15">
+			<pose> -14 36 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_16">
+			<pose> 2 17 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_16">
+			<pose> 2 17 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_17">
+			<pose> -5 24 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_17">
+			<pose> -5 24 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_18">
+			<pose> 6 27 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_18">
+			<pose> 6 27 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_19">
+			<pose> 37 13 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_19">
+			<pose> 37 13 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_20">
+			<pose> 30 -30 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_20">
+			<pose> 30 -30 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_21">
+			<pose> -9 34 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_21">
+			<pose> -9 34 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_22">
+			<pose> 30 -16 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_22">
+			<pose> 30 -16 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_23">
+			<pose> -40 -2 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_23">
+			<pose> -40 -2 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_24">
+			<pose> -20 31 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_24">
+			<pose> -20 31 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_25">
+			<pose> -7 7 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_25">
+			<pose> -7 7 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_26">
+			<pose> 4 6 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_26">
+			<pose> 4 6 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_27">
+			<pose> -31 15 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_27">
+			<pose> -31 15 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_28">
+			<pose> 6 -17 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_28">
+			<pose> 6 -17 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+		<link name="tronc_29">
+			<pose> 37 14 1.0  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.4 0.3 0.2 1</ambient>
+					<diffuse>0.3 0.2 0.1 1</diffuse>
+					<specular>0.1 0.1 0.1 1</specular>
+					<emissive>0 0 0 0</emissive>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Red</name>
+                        		</script>
+				</material>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.5 0.5 2.0</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
+		<link name="feuillage_29">
+			<pose> 37 14 2.5  0 0 0</pose>
+			<visual name="visual">
+				<geometry>
+					<sphere>
+						<size>6.0</size>
+					</sphere>
+				</geometry>
+				<material>
+					<script>
+                            			<uri>file://media/materials/scripts/gazebo.material</uri>
+                            			<name>Gazebo/Green</name>
+                        		</script>
+				</material>
+			</visual>
+		</link>
+
 	</model>
 
 
