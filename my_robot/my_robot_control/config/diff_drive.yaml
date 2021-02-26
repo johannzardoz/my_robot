@@ -1,37 +1,41 @@
-type: "diff_drive_controller/DiffDriveController"
-left_wheel: "rl_wheel_joint"
-right_wheel: "rr_wheel_joint"
-publish_rate: 50.0
-pose_covariance_diagonale: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
-twist_covariance_diagonale: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+  # # Diff Drive Controller ---------------------------------------
+   my_robot_velocity_controller:
+     type: "diff_drive_controller/DiffDriveController"
+     left_wheel: 'rl_wheel_joint'
+     right_wheel: 'rr_wheel_joint'
+     publish_rate: 100
+     pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+     cmd_vel_timeout: 0.25
 
-wheel_separation: 0.06
-wheel_radius: 0.0375
+  #   # Base frame_id
+     base_frame_id: base_link
 
-wheel_separation_multiplier: 1.0
-wheel_separation_radius: 1.0
+  #   # Odometry fused with IMU, so no
+  #   # need to publish a TF based on encoders alone.
+     enable_odom_tf: false
 
-enable_odom_tf: true
+  #   # a390 hardware provides wheel velocities
+     estimate_velocity_from_position: false
 
-cmd_vel_timeout: 0.25
 
-base_frame_id: base_link
-linear:
- x: 
-  has_velocity_limits: true
-  max_velocity: 1.0
-  min_velocity: -0.5
-  has_acceleration_limits: true
-  max_acceleration: 0.8
-  min_acceleration: -0.4
-  has_jerk_limits: true
-  max_jerk: 5.0
-angular:
- z: 
-  has_velocity_limits: true
-  max_velocity: 1.7
-  has_acceleration_limits: true
-  max_acceleration: 1.5
-  has_jerk_limits: true
-  max_jerk: 2.5
+  #   # Wheel separation and radius multipliers
+     wheel_separation_multiplier: 1.0 # default: 1.0  ajuster pour qu il tourne de la bonne quantite
+     wheel_radius_multiplier    : 1.0 # default: 1.0  a modifier pour la distance la ligne droite
 
+  #   # Velocity and acceleration limits
+  #   # Whenever a min_* is unspecified, default to -max_*
+     linear:
+       x:
+         has_velocity_limits    : true
+         max_velocity           : 3.277   # m/s
+         min_velocity           : -3.277   # m/s
+         has_acceleration_limits: true
+         max_acceleration       : 1.500   # m/s^2
+         min_acceleration       : -1.500   # m/s^2
+     angular:
+       z:
+         has_velocity_limits    : true
+         max_velocity           : 1.0   # rad/s
+         has_acceleration_limits: true
+         max_acceleration       : 3.0   # rad/s^2

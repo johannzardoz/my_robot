@@ -1,13 +1,7 @@
 <launch>
 	<arg name="model" default="$(find my_robot_description)/urdf/00-agricole.xacro"/>
-        <arg name="gui" default="true" />
-	<arg name="rvizconfig" default="$(find my_robot_description)/rviz/urdf.rviz" />
-	
-	<param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)"/>
-	<param name="use_gui" value="$(arg gui)"/>
-	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
-	<rosparam command="load" file="$(find my_robot_control)/config/joints.yaml" ns="my_robot_joint_state_controller"/> 
-	<rosparam command="load" file="$(find my_robot_control)/config/diff_drive.yaml" ns="my_robot_velocity_controller"/>
-	<node name="my_robot_controller_spawner" pkg="controller_manager" type="spawner" args="my_robot_joint_state_controller my_robot_velocity_controller"/>
+
+	<rosparam command="load" file="$(find my_robot_control)/config/joints.yaml"/> 
+	<rosparam command="load" file="$(find my_robot_control)/config/diff_drive.yaml"/>
+	<node name="my_robot_controller_spawner" pkg="controller_manager" type="spawner" ns="/" args="my_robot_state_controller my_robot_velocity_controller"/>
 </launch>
