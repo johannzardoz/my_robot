@@ -1,7 +1,7 @@
 <launch>
 	<arg name="headless" default="false" />
 	<arg name="debug" default="false" />
-	<arg name="model" default="$(find my_robot_description)/urdf/00-agricole.xacro"/>
+	<arg name="model" default="$(find my_robot_description)/urdf/01-agricole.xacro"/>
 	<arg name="rvizconfig" default="$(find my_robot_description)/rviz/urdf.rviz" />
 
 	<include file="$(find my_robot_gazebo)/launch/world.launch">
