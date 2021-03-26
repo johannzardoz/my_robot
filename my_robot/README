@@ -25,3 +25,6 @@ Pour pouvoir récupérer les informations de l'IMU il faut faire :
 Pour faire avancer le robot il faut publier au topic cmd_vel dans un nouveau terminal, la commande est la suivante:
   - rostopic pub /my_robot_velocity_controller/cmd_vel geometry_msgs/Twist -r 3 -- '[<vitesse en m.s>,0.0,0.0]' '[0.0, 0.0, <rotation en m.s>]'
   Le robot va avancer tant que la commande n'est pas arrétée (CTRL+C)
+  
+Vous retrouverez aussi dans le dossier du projet des programmes python que nous avons écrit dont nous nous sommes servi pour générer le monde 
+(notamment le positionnement aléatoire de beaucoup d'abres et de citrouilles)
