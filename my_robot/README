@@ -33,5 +33,3 @@ Vous retrouverez aussi dans le dossier du projet des programmes python que nous 
 (notamment le positionnement aléatoire de beaucoup d'abres et de citrouilles)
 
 Le lidar est pour l'instant disposé dans le "vide" au dessus du robot car nous n'avons pas encore conçu le support (c'est prévu pour l'année prochaine)
-
-Pour implémenter les plugins nous nous sommes aidés d'internet : http://moorerobots.com/blog/post/2
