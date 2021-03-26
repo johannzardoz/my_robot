@@ -1,6 +1,9 @@
 ------PROJET REALISE PAR DORIAN KEMPF ET JOHANN BERTRAND------
 
-Notre robot est équipé d'une caméra placée à l'avant regardant vers le sol (pour détecter des citrouilles) et d'un IMU pour corriger sa trajectoire
+Notre robot est équipé : 
+  - D'une caméra placée à l'avant regardant vers le sol (pour détecter des citrouilles) 
+  - D'un IMU pour corriger sa trajectoire
+  - D'un LIDAR (pour détecter les obstacles
 Notre robot est équipé de 2 roues motrices à l'arrière, et 2 roues libres à l'avant.
 
 Pour lancer la simulation il faut ecrire ces commandes :
@@ -28,3 +31,7 @@ Pour faire avancer le robot il faut publier au topic cmd_vel dans un nouveau ter
   
 Vous retrouverez aussi dans le dossier du projet des programmes python que nous avons écrit dont nous nous sommes servi pour générer le monde 
 (notamment le positionnement aléatoire de beaucoup d'abres et de citrouilles)
+
+Le lidar est pour l'instant disposé dans le "vide" au dessus du robot car nous n'avons pas encore conçu le support (c'est prévu pour l'année prochaine)
+
+Pour implémenter les plugins nous nous sommes aidés d'internet : http://moorerobots.com/blog/post/2
