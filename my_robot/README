@@ -1,0 +1,27 @@
+------PROJET REALISE PAR DORIAN KEMPF ET JOHANN BERTRAND------
+
+Notre robot est équipé d'une caméra placée à l'avant regardant vers le sol (pour détecter des citrouilles) et d'un IMU pour corriger sa trajectoire
+Notre robot est équipé de 2 roues motrices à l'arrière, et 2 roues libres à l'avant.
+
+Pour lancer la simulation il faut ecrire ces commandes :
+
+  - source devel/setup.bash
+  (dans le dossier de votre workspace)
+  
+  - export GAZEBO_RESOURCE_PATH=~/<votre_workspace>/src/my_robot/my_robot_gazebo/world/:$GAZEBO_RESOURCE_PATH
+  (dans notre cas la commande etait : export GAZEBO_RESOURCE_PATH=~/ROS1/cours_ws/src/my_robot/my_robot_gazebo/world/:$GAZEBO_RESOURCE_PATH)
+  
+  - roslaunch my_robot_gazebo demo_gazebo.launch
+
+La simulation lance Rviz et Gazebo, la caméra est visible sur Rviz.
+
+Pour pouvoir voir l'image de la caméra il faut accéder au topic imageview dans un nouveau terminal, la commande est la suivante :
+  - rosrun image_view image_view image:=/mybot/camera/image_raw
+  
+Pour pouvoir récupérer les informations de l'IMU il faut faire :
+  - CTRL+T dans Gazebo
+  - Cliquer sur /gazebo/default/robot/base_link/imu/imu (dans gazebo.msgs.IMU)
+
+Pour faire avancer le robot il faut publier au topic cmd_vel dans un nouveau terminal, la commande est la suivante:
+  - rostopic pub /my_robot_velocity_controller/cmd_vel geometry_msgs/Twist -r 3 -- '[<vitesse en m.s>,0.0,0.0]' '[0.0, 0.0, <rotation en m.s>]'
+  Le robot va avancer tant que la commande n'est pas arrétée (CTRL+C)
