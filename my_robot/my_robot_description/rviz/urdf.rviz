@@ -9,7 +9,6 @@ Panels:
         - /Grid1
         - /RobotModel1
         - /RobotModel1/Links1
-        - /camera11
       Splitter Ratio: 0.5
     Tree Height: 375
   - Class: rviz/Selection
@@ -86,6 +85,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        hokuyo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         imu:
           Alpha: 1
           Show Axes: false
@@ -129,9 +133,40 @@ Visualization Manager:
       Visibility:
         Grid: true
         Imu: true
+        LaserScan: true
         RobotModel: true
         Value: true
       Zoom Factor: 1
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.10000000149011612
+      Style: Flat Squares
+      Topic: /mybot/laser/scan
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -160,7 +195,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.295553684234619
+      Distance: 4.630015850067139
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -175,10 +210,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.15539787709712982
+      Pitch: 0.2803979218006134
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.5135626792907715
+      Yaw: 3.793562173843384
     Saved: ~
 Window Geometry:
   Displays:
@@ -196,7 +231,7 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 439
-  Y: 89
+  X: 456
+  Y: 92
   camera1:
     collapsed: false
